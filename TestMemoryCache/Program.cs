@@ -9,7 +9,6 @@ var serviceProvider = services.BuildServiceProvider();
 var memoryCache = serviceProvider.GetService<IMemoryCache>();
 if (memoryCache is null) return;
 
-// value 1
 foreach (var key in new List<string> { "key1", "key1", "key2" })
 {
     if (!memoryCache.TryGetValue(key, out string? content))
